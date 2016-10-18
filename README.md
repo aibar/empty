@@ -1,3 +1,3 @@
-## Base stuff
+## Base Docker rootfs stuff
 
     FROM aibar/empty

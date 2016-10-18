@@ -10,7 +10,6 @@ ln -s /bin usr/bin
 echo root:x:0:0:root:/:/dev/null > etc/passwd
 echo root:x:0: > etc/group
 
-sudo chown -R 0 ./
-sudo chgrp -R 0 ./
+sudo chown -R 0:0 ./
 
 tar czfv ../fs.tar.gz ./*
