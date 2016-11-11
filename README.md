@@ -1,3 +1,3 @@
 ## Base Docker rootfs stuff
 
-    FROM aibar/empty
+    FROM walkingdevs/empty

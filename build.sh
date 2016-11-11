@@ -1,15 +1,10 @@
 #!/bin/bash
 
-sudo rm -rf out && mkdir -v out
-cd out
+docker build --rm \
+       -f Dockerfile-builder \
+       -t empty-builder .
 
-mkdir -v etc usr
-ln -s /bin sbin
-ln -s /bin usr/bin
-
-echo root:x:0:0:root:/:/dev/null > etc/passwd
-echo root:x:0: > etc/group
-
-sudo chown -R 0:0 ./
-
-tar czfv ../fs.tar.gz ./*
+docker run --rm -it \
+       -v $PWD:/mnt \
+       empty-builder \
+       cp /rootfs.tar.gz /mnt

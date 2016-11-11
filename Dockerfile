@@ -1,3 +1,3 @@
 FROM scratch
 
-ADD fs.tar.gz /
+ADD rootfs.tar.gz /
