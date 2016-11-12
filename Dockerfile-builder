@@ -4,11 +4,11 @@ RUN  \
      mkdir -v out && \
      cd out && \
 
-     mkdir -v etc usr && \
+     mkdir -v etc usr home root && \
      ln -s /bin sbin && \
      ln -s /bin usr/bin && \
 
-     echo root:x:0:0:root:/:/bin/sh > etc/passwd && \
+     echo root:x:0:0:root:/root:/bin/sh > etc/passwd && \
      echo root:x:0: > etc/group && \
 
      tar czfv /rootfs.tar.gz ./*
